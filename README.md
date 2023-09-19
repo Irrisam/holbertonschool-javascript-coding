@@ -1,0 +1,1 @@
+Repo used to train ourselfs to webscraping through JavaScript.
