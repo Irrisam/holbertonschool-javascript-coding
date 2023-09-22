@@ -1,18 +1,14 @@
 #!/usr/bin/node
+const request = require('request');
 
 const movieId = process.argv[2];
-const apiUrl = `https://swapi-api.hbtn.io/api/films/${movieId}`;
+const url = `https://swapi-api.hbtn.io/api/films/${movieId}`;
 
-
-request(apiUrl, (error, response, body) => {
+request(url, (error, response, body) => {
   if (error) {
-    console.error('Error:', error);
+    console.error(error);
   } else {
-    try {
-      const movieData = JSON.parse(body);
-      console.log('Title:', movieData.title);
-    } catch (parseError) {
-      console.error('Error parsing API response:', parseError);
-    }
+    const jsonBody = JSON.parse(body);
+    console.log(jsonBody.title);
   }
 });
