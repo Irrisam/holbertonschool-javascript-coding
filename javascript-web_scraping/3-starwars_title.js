@@ -4,7 +4,7 @@ const movieId = process.argv[2];
 const apiUrl = `https://swapi-api.hbtn.io/api/films/${movieId}`;
 
 
-request(apiUrl, (error, body) => {
+request(apiUrl, (error, response, body) => {
   if (error) {
     console.error('Error:', error);
   } else {
