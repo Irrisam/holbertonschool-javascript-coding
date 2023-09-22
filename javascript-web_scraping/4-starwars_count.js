@@ -14,7 +14,7 @@ request(apiUrl, (error, response, body) => {
         film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')
       );
       const count = antillesMovies.length;
-      console.log(`Number of movies with Wedge Antilles: ${count}`);
+      console.log(`${count}`);
     } catch (parseError) {
       console.error('Error parsing API response:', parseError);
     }
